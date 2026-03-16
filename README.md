@@ -1,0 +1,3577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Frontier Freight Forwarding LLC | Global Shipping & Logistics 2026</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ========== COMPLETE PROFESSIONAL STYLES ========== */
+        
+        /* Global Variables */
+        :root {
+            --primary: #0a2540;
+            --secondary: #1c3d5a;
+            --accent: #ff6b35;
+            --accent-light: #ff8c5a;
+            --accent-dark: #e55a2b;
+            --light: #f8f9fa;
+            --lighter: #ffffff;
+            --dark: #0a1929;
+            --darker: #061121;
+            --success: #2ecc71;
+            --warning: #f39c12;
+            --danger: #e74c3c;
+            --info: #3498db;
+            --border: #e1e8ed;
+            --border-light: #f0f4f8;
+            --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.12);
+            --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.08);
+            --shadow-sm: 0 5px 15px rgba(0, 0, 0, 0.05);
+            --radius: 16px;
+            --radius-sm: 8px;
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+            --transition-fast: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+            color: #444;
+            background: linear-gradient(135deg, #f8f9fa 0%, #f0f4f8 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        /* ========== ADMIN ACCESS MODAL ========== */
+        .admin-access-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 10002;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .admin-access-modal.active {
+            display: flex;
+        }
+
+        .admin-access-content {
+            background: white;
+            padding: 50px;
+            border-radius: var(--radius);
+            max-width: 450px;
+            width: 90%;
+            text-align: center;
+            border: 3px solid var(--accent);
+            box-shadow: var(--shadow-lg);
+            animation: slideUpModal 0.4s ease;
+        }
+
+        .admin-access-icon {
+            font-size: 4rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .admin-access-title {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .admin-access-subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .admin-password-input {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid var(--border);
+            border-radius: var(--radius-sm);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            font-family: 'Open Sans', sans-serif;
+            transition: var(--transition-fast);
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        .admin-password-input:focus {
+            border-color: var(--accent);
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.15);
+        }
+
+        .admin-access-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .admin-access-btn {
+            padding: 14px 30px;
+            border: none;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1rem;
+        }
+
+        .admin-access-btn.primary {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            color: white;
+        }
+
+        .admin-access-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.25);
+        }
+
+        .admin-access-btn.secondary {
+            background: var(--light);
+            color: var(--primary);
+            border: 2px solid var(--border);
+        }
+
+        .admin-access-btn.secondary:hover {
+            background: var(--border);
+        }
+
+        .admin-error-message {
+            color: var(--danger);
+            margin-top: 15px;
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .admin-error-message.show {
+            display: block;
+            animation: shake 0.5s ease;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+            20%, 40%, 60%, 80% { transform: translateX(5px); }
+        }
+
+        /* ========== ADMIN PANEL ========== */
+        .admin-panel {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+            background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
+            color: white;
+            padding: 12px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            border: 2px solid var(--accent);
+            display: none; /* Initially hidden */
+        }
+
+        .admin-panel.visible {
+            display: block;
+            animation: pulse 1s;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .admin-toggle {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+            letter-spacing: 0.5px;
+        }
+
+        .admin-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.25);
+        }
+
+        .admin-panel-content {
+            display: none;
+            position: absolute;
+            top: calc(100% + 15px);
+            right: 0;
+            width: 600px;
+            background: white;
+            color: var(--dark);
+            padding: 35px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            border: 2px solid var(--accent);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .admin-panel.active .admin-panel-content {
+            display: block;
+            animation: slideDown 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .admin-section {
+            margin-bottom: 35px;
+            padding-bottom: 25px;
+            border-bottom: 2px solid var(--border-light);
+        }
+
+        .admin-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .admin-section h4 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid var(--accent);
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .admin-input {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid var(--border);
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+            margin-bottom: 15px;
+            font-family: 'Open Sans', sans-serif;
+            background: var(--lighter);
+            transition: var(--transition-fast);
+        }
+
+        .admin-input:focus {
+            border-color: var(--accent);
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.15);
+        }
+
+        .admin-btn {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-weight: 700;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+        }
+
+        .admin-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.25);
+        }
+
+        .admin-btn.danger {
+            background: linear-gradient(135deg, var(--danger) 0%, #c0392b 100%);
+        }
+
+        .admin-btn.success {
+            background: linear-gradient(135deg, var(--success) 0%, #27ae60 100%);
+        }
+
+        .admin-btn.info {
+            background: linear-gradient(135deg, var(--info) 0%, #2980b9 100%);
+        }
+
+        .admin-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .admin-stat-card {
+            background: var(--light);
+            padding: 15px;
+            border-radius: var(--radius-sm);
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .admin-stat-number {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .admin-stat-label {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        /* New tracking control styles */
+        .tracking-control {
+            background: var(--light);
+            padding: 20px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+        }
+
+        .tracking-step-control {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 15px 0;
+            padding: 10px;
+            background: white;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+        }
+
+        .step-status {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .step-status.pending {
+            background: var(--warning);
+            color: white;
+        }
+
+        .step-status.active {
+            background: var(--accent);
+            color: white;
+            animation: pulse 1.5s infinite;
+        }
+
+        .step-status.completed {
+            background: var(--success);
+            color: white;
+        }
+
+        .step-name {
+            flex: 1;
+            font-weight: 600;
+        }
+
+        .step-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .step-btn {
+            padding: 5px 15px;
+            border: none;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition-fast);
+        }
+
+        .step-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .step-btn.complete {
+            background: var(--success);
+            color: white;
+        }
+
+        .step-btn.activate {
+            background: var(--accent);
+            color: white;
+        }
+
+        .recent-registrations {
+            max-height: 300px;
+            overflow-y: auto;
+            margin-top: 15px;
+        }
+
+        .registration-item {
+            background: white;
+            padding: 15px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 10px;
+            border-left: 4px solid var(--accent);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .registration-time {
+            font-size: 0.8rem;
+            color: #888;
+            margin-bottom: 5px;
+        }
+
+        .registration-name {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .registration-email {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .registration-status {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        .status-pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .status-verified {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        /* ========== PAYMENT MODAL ========== */
+        .payment-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            z-index: 10001;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .payment-modal.active {
+            display: flex;
+        }
+
+        .payment-content {
+            background: white;
+            padding: 60px;
+            border-radius: var(--radius);
+            max-width: 700px;
+            width: 100%;
+            position: relative;
+            animation: slideUpModal 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 3px solid var(--accent);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .payment-header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .payment-header::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+            border-radius: 2px;
+        }
+
+        .payment-icon {
+            font-size: 4rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .payment-title {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .payment-subtitle {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        /* ========== PAYMENT OPTIONS ========== */
+        .payment-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        @media (max-width: 768px) {
+            .payment-options {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .payment-option {
+            background: var(--light);
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+            padding: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+        }
+
+        .payment-option:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: var(--shadow-md);
+        }
+
+        .payment-option.selected {
+            border-color: var(--accent);
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.05), transparent);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.1);
+        }
+
+        .payment-option-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+
+        .payment-option-title {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .payment-option-desc {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .payment-option-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--accent);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        /* ========== PAYMENT DETAILS ========== */
+        .payment-details {
+            background: linear-gradient(135deg, var(--light) 0%, #f0f4f8 100%);
+            padding: 30px;
+            border-radius: var(--radius);
+            margin: 30px 0;
+            border: 2px solid var(--border-light);
+        }
+
+        .payment-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .summary-item {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+        }
+
+        .summary-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .summary-value {
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: var(--primary);
+        }
+
+        .summary-value.shipping-cost {
+            color: var(--accent);
+            font-size: 1.8rem;
+        }
+
+        .total-amount {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 25px;
+            border-radius: var(--radius);
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .total-label {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        .total-value {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--accent);
+        }
+
+        /* ========== BITCOIN PAYMENT SECTION ========== */
+        .bitcoin-section {
+            display: none;
+            margin-top: 30px;
+            padding: 30px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border-radius: var(--radius);
+            color: white;
+        }
+
+        .bitcoin-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .bitcoin-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .bitcoin-icon {
+            font-size: 2.5rem;
+            color: #f7931a;
+        }
+
+        .bitcoin-address-container {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: var(--radius-sm);
+            margin: 20px 0;
+            border: 2px solid #f7931a;
+        }
+
+        .bitcoin-address {
+            font-family: 'Montserrat', monospace;
+            font-size: 1.2rem;
+            word-break: break-all;
+            color: white;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: var(--radius-sm);
+            border: 1px dashed #f7931a;
+        }
+
+        .copy-address-btn {
+            background: #f7931a;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .copy-address-btn:hover {
+            background: #e08217;
+            transform: translateY(-2px);
+        }
+
+        .bitcoin-qr {
+            text-align: center;
+            margin: 25px 0;
+            padding: 20px;
+            background: white;
+            border-radius: var(--radius-sm);
+            display: inline-block;
+        }
+
+        .qr-placeholder {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(45deg, #f7931a, #ffb347);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            border-radius: var(--radius-sm);
+            margin: 0 auto;
+        }
+
+        /* ========== GIFT CARD PAYMENT SECTION ========== */
+        .giftcard-section {
+            display: none;
+            margin-top: 30px;
+            padding: 30px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: var(--radius);
+            border: 2px solid var(--border);
+        }
+
+        .giftcard-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .giftcard-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .giftcard-option {
+            background: white;
+            padding: 25px;
+            border-radius: var(--radius);
+            border: 2px solid var(--border);
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .giftcard-option:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: var(--shadow-md);
+        }
+
+        .giftcard-option.selected {
+            border-color: var(--accent);
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.05), transparent);
+        }
+
+        .giftcard-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .apple-icon { color: #000000; }
+        .razer-icon { color: #44d62c; }
+
+        .giftcard-option-title {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .giftcard-instructions {
+            background: white;
+            padding: 25px;
+            border-radius: var(--radius);
+            margin-top: 25px;
+            border-left: 4px solid var(--accent);
+        }
+
+        /* ========== RECEIPT UPLOAD SECTION ========== */
+        .receipt-section {
+            display: none;
+            margin-top: 40px;
+            padding: 35px;
+            background: linear-gradient(135deg, var(--light) 0%, #e8f4ff 100%);
+            border-radius: var(--radius);
+            border: 2px solid var(--border);
+        }
+
+        .receipt-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .upload-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        @media (max-width: 768px) {
+            .upload-options {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .upload-option {
+            background: white;
+            padding: 25px;
+            border-radius: var(--radius);
+            text-align: center;
+            border: 2px solid var(--border);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .upload-option:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .upload-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .upload-title {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .upload-desc {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .email-upload {
+            background: white;
+            padding: 30px;
+            border-radius: var(--radius);
+            margin-top: 25px;
+            border: 2px solid var(--accent);
+            text-align: center;
+        }
+
+        .email-address {
+            font-family: 'Montserrat', monospace;
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--light);
+            border-radius: var(--radius-sm);
+            word-break: break-all;
+        }
+
+        .email-btn {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+        }
+
+        .email-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .file-upload {
+            background: white;
+            padding: 30px;
+            border-radius: var(--radius);
+            margin-top: 25px;
+            border: 2px dashed var(--accent);
+            text-align: center;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .file-upload-label {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--info) 0%, #2980b9 100%);
+            color: white;
+            padding: 15px 35px;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-bottom: 20px;
+        }
+
+        .file-upload-label:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+        }
+
+        .uploaded-files {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .uploaded-file {
+            background: var(--light);
+            padding: 15px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid var(--border);
+        }
+
+        /* ========== TRACKING SECTION ========== */
+        .tracking-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8f4ff 100%);
+            position: relative;
+        }
+
+        .tracking-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 300px;
+            background: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            opacity: 0.03;
+        }
+
+        .tracking-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .tracking-form-container {
+            background: white;
+            padding: 50px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            border: 2px solid var(--border-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tracking-form-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+        }
+
+        .tracking-result {
+            display: none;
+            margin-top: 40px;
+            padding: 40px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: var(--radius);
+            color: white;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tracking-result.active {
+            display: block;
+        }
+
+        .tracking-steps {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+            position: relative;
+        }
+
+        .tracking-steps::before {
+            content: '';
+            position: absolute;
+            top: 25px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: rgba(255,255,255,0.3);
+            z-index: 1;
+        }
+
+        .tracking-step {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            flex: 1;
+        }
+
+        .step-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 1.5rem;
+            border: 3px solid transparent;
+            transition: var(--transition);
+        }
+
+        .tracking-step.active .step-icon {
+            background: var(--accent);
+            border-color: white;
+            transform: scale(1.1);
+        }
+
+        .tracking-step.completed .step-icon {
+            background: var(--success);
+            border-color: white;
+        }
+
+        .step-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* ========== HEADER ========== */
+        header {
+            background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.98) 100%);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-md);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,107,53,0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo-icon {
+            font-size: 3rem;
+            color: var(--accent);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 15px;
+            border-radius: 20px;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-md);
+        }
+
+        .logo-text {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--primary);
+            letter-spacing: -1px;
+        }
+
+        .logo-text span {
+            color: var(--accent);
+            position: relative;
+        }
+
+        .logo-tagline {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 8px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.05rem;
+            padding: 10px 0;
+            position: relative;
+            transition: var(--transition-fast);
+            letter-spacing: 0.3px;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent);
+        }
+
+        nav ul li a.active {
+            color: var(--accent);
+        }
+
+        nav ul li a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 2px;
+            animation: expandWidth 0.3s ease;
+        }
+
+        /* ========== HERO SECTION ========== */
+        .hero {
+            background: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.92)), 
+                        url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 160px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            color: white;
+            margin-bottom: 30px;
+            text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+            line-height: 1.2;
+            letter-spacing: -1.5px;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero-subtitle {
+            font-size: 1.6rem;
+            max-width: 900px;
+            margin: 0 auto 60px;
+            opacity: 0.95;
+            line-height: 1.6;
+            font-weight: 300;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            margin-top: 90px;
+            flex-wrap: wrap;
+            animation: fadeInUp 1.2s ease;
+        }
+
+        .stat-item {
+            text-align: center;
+            position: relative;
+            padding: 0 20px;
+        }
+
+        .stat-item::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -40px;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 40px;
+            background: rgba(255,255,255,0.2);
+        }
+
+        .stat-item:last-child::before {
+            display: none;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--accent);
+            margin-bottom: 10px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        /* ========== REGISTRATION SECTION ========== */
+        .registration-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--lighter) 0%, #f8fafd 100%);
+            position: relative;
+        }
+
+        .registration-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 300px;
+            background: url('https://images.unsplash.com/photo-1562887189-e5d078343de4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            opacity: 0.05;
+        }
+
+        .registration-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1300px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .registration-form-container {
+            background: white;
+            padding: 50px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            border: 2px solid var(--border-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .registration-form-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+        }
+
+        .registration-info {
+            padding: 50px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: var(--radius);
+            color: white;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .registration-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1601055929635-b8cfe657f29d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            opacity: 0.1;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1rem;
+        }
+
+        .form-label.required::after {
+            content: ' *';
+            color: var(--danger);
+        }
+
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid var(--border);
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+            transition: var(--transition-fast);
+            font-family: 'Open Sans', sans-serif;
+            background: var(--lighter);
+        }
+
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            border-color: var(--accent);
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.15);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .form-checkbox {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .form-checkbox-label {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .form-checkbox-label a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .form-checkbox-label a:hover {
+            text-decoration: underline;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            border-radius: var(--radius-sm);
+            font-size: 1.1rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-top: 30px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .price-display {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 15px 25px;
+            border-radius: var(--radius-sm);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .price-amount {
+            color: var(--accent);
+            font-size: 1.4rem;
+        }
+
+        .delivery-time {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 5px;
+            display: block;
+        }
+
+        /* ========== PAYMENT ACTIONS ========== */
+        .payment-actions {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+            justify-content: center;
+        }
+
+        .payment-btn {
+            padding: 18px 40px;
+            border-radius: var(--radius-sm);
+            border: none;
+            font-weight: 800;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.1rem;
+            min-width: 200px;
+            justify-content: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .payment-btn.primary {
+            background: linear-gradient(135deg, var(--success) 0%, #27ae60 100%);
+            color: white;
+        }
+
+        .payment-btn.secondary {
+            background: var(--light);
+            color: var(--primary);
+            border: 2px solid var(--border);
+        }
+
+        .payment-btn.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .payment-btn:hover:not(.disabled) {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* ========== PAYMENT VERIFICATION SECTION ========== */
+        .payment-verification-section {
+            background: var(--light);
+            padding: 20px;
+            border-radius: var(--radius-sm);
+            margin-top: 20px;
+            border: 2px solid var(--border);
+        }
+
+        .pending-payments {
+            max-height: 300px;
+            overflow-y: auto;
+            margin-top: 15px;
+        }
+
+        .pending-payment {
+            background: white;
+            padding: 15px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 10px;
+            border: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .payment-info {
+            flex: 1;
+        }
+
+        .payment-actions-small {
+            display: flex;
+            gap: 10px;
+        }
+
+        .verify-btn {
+            background: var(--success);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* ========== SERVICES SECTION ========== */
+        .services-section {
+            padding: 120px 0;
+            background: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 25px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto 70px;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .service-card {
+            background: var(--lighter);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border: 1px solid var(--border-light);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent-light);
+        }
+
+        .service-icon {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 40px;
+            text-align: center;
+            color: white;
+            font-size: 3.5rem;
+        }
+
+        .service-content {
+            padding: 35px;
+        }
+
+        .service-title {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .service-description {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .service-features {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .service-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-light);
+            color: #555;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .service-features li i {
+            color: var(--accent);
+        }
+
+        .service-btn {
+            background: transparent;
+            color: var(--accent);
+            border: 2px solid var(--accent);
+            padding: 12px 25px;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .service-btn:hover {
+            background: var(--accent);
+            color: white;
+            transform: translateX(5px);
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
+            color: white;
+            padding: 80px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--accent);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #b0b7c3;
+            text-decoration: none;
+            transition: var(--transition-fast);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+            transform: translateX(5px);
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .contact-info li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .contact-info i {
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .social-icon {
+            background: rgba(255,255,255,0.1);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .social-icon:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #b0b7c3;
+            font-size: 0.95rem;
+        }
+
+        /* ========== ANIMATIONS ========== */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUpModal {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes expandWidth {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        /* ========== UTILITIES ========== */
+        .highlight {
+            color: var(--accent);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-30 {
+            margin-top: 30px;
+        }
+
+        .mt-50 {
+            margin-top: 50px;
+        }
+
+        .mb-30 {
+            margin-bottom: 30px;
+        }
+
+        .mb-50 {
+            margin-bottom: 50px;
+        }
+
+        .pt-100 {
+            padding-top: 100px;
+        }
+
+        .pb-100 {
+            padding-bottom: 100px;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1200px) {
+            .registration-container {
+                grid-template-columns: 1fr;
+                max-width: 800px;
+            }
+            
+            .hero h1 {
+                font-size: 3.8rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            nav ul {
+                gap: 20px;
+            }
+            
+            .hero-stats {
+                gap: 40px;
+            }
+            
+            .stat-item::before {
+                right: -20px;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+                max-width: 600px;
+                margin: 60px auto 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.3rem;
+                padding: 0 20px;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .payment-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .payment-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .admin-panel {
+                position: relative;
+                top: 0;
+                right: 0;
+                margin: 20px auto;
+                width: 90%;
+            }
+            
+            .admin-panel-content {
+                width: 100%;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                max-height: 90vh;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .registration-form-container,
+            .registration-info {
+                padding: 30px;
+            }
+            
+            .payment-content {
+                padding: 30px;
+            }
+        }
+
+        /* ========== PRINT STYLES ========== */
+        @media print {
+            .admin-panel,
+            nav,
+            .service-btn,
+            .submit-btn,
+            .payment-btn {
+                display: none !important;
+            }
+            
+            .service-card {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Admin Access Modal -->
+    <div class="admin-access-modal" id="adminAccessModal">
+        <div class="admin-access-content">
+            <div class="admin-access-icon">
+                <i class="fas fa-lock"></i>
+            </div>
+            <h2 class="admin-access-title">Admin Access</h2>
+            <p class="admin-access-subtitle">Enter your admin password to continue</p>
+            
+            <input type="password" class="admin-password-input" id="adminPassword" placeholder="Enter Password" autocomplete="off">
+            
+            <div class="admin-access-buttons">
+                <button class="admin-access-btn primary" onclick="verifyAdminPassword()">
+                    <i class="fas fa-unlock-alt"></i> Access Panel
+                </button>
+                <button class="admin-access-btn secondary" onclick="closeAdminAccessModal()">
+                    <i class="fas fa-times"></i> Cancel
+                </button>
+            </div>
+            
+            <div class="admin-error-message" id="adminErrorMessage">
+                <i class="fas fa-exclamation-circle"></i> Incorrect password. Please try again.
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div class="admin-panel" id="adminPanel">
+        <button class="admin-toggle" onclick="toggleAdminPanel()">
+            <i class="fas fa-cog"></i> Admin Panel
+        </button>
+        <div class="admin-panel-content">
+            <div class="admin-section">
+                <h4><i class="fas fa-users"></i> Recent Registrations</h4>
+                <div class="recent-registrations" id="recentRegistrations">
+                    <!-- Recent registrations will be loaded here -->
+                </div>
+            </div>
+
+            <div class="admin-section">
+                <h4><i class="fas fa-ship"></i> Shipping Management</h4>
+                <input type="text" class="admin-input" id="adminShippingName" placeholder="Shipping Name">
+                <input type="number" class="admin-input" id="adminShippingPrice" placeholder="Shipping Price">
+                <button class="admin-btn success" onclick="addShippingMethod()"><i class="fas fa-plus"></i> Add Shipping Method</button>
+                <div id="shippingMethodsList" class="mt-30"></div>
+            </div>
+            
+            <div class="admin-section">
+                <h4><i class="fas fa-users"></i> User Management</h4>
+                <select class="admin-input" id="adminUserFilter" onchange="filterUsers()">
+                    <option value="all">All Users</option>
+                    <option value="pending">Pending Payment</option>
+                    <option value="verified">Verified</option>
+                </select>
+                <div id="usersList" class="mt-30"></div>
+            </div>
+
+            <div class="admin-section">
+                <h4><i class="fas fa-box"></i> Tracking Management</h4>
+                <select class="admin-input" id="trackingSelect" onchange="loadTrackingDetails()">
+                    <option value="">Select Tracking Number</option>
+                </select>
+                <div id="trackingDetails" class="mt-30"></div>
+            </div>
+            
+            <div class="admin-section">
+                <h4><i class="fas fa-chart-line"></i> Statistics</h4>
+                <div class="admin-stats">
+                    <div class="admin-stat-card">
+                        <div class="admin-stat-number" id="totalUsers">0</div>
+                        <div class="admin-stat-label">Total Users</div>
+                    </div>
+                    <div class="admin-stat-card">
+                        <div class="admin-stat-number" id="pendingPayments">0</div>
+                        <div class="admin-stat-label">Pending Payments</div>
+                    </div>
+                    <div class="admin-stat-card">
+                        <div class="admin-stat-number" id="totalRevenue">$0</div>
+                        <div class="admin-stat-label">Total Revenue</div>
+                    </div>
+                    <div class="admin-stat-card">
+                        <div class="admin-stat-number" id="shippingMethods">0</div>
+                        <div class="admin-stat-label">Shipping Methods</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="admin-section">
+                <h4><i class="fas fa-cogs"></i> System Tools</h4>
+                <button class="admin-btn info" onclick="backupData()"><i class="fas fa-download"></i> Backup Data</button>
+                <button class="admin-btn danger" onclick="clearAllData()"><i class="fas fa-trash"></i> Clear All Data</button>
+                <button class="admin-btn" onclick="exportToCSV()"><i class="fas fa-file-csv"></i> Export to CSV</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div class="payment-modal" id="paymentModal">
+        <div class="payment-content">
+            <div class="payment-header">
+                <div class="payment-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h2 class="payment-title">Secure Payment</h2>
+                <p class="payment-subtitle">Choose your preferred payment method</p>
+            </div>
+            
+            <div class="payment-details">
+                <h3>Order Summary</h3>
+                <div class="payment-summary">
+                    <div class="summary-item">
+                        <div class="summary-label">Service Type</div>
+                        <div class="summary-value" id="modalServiceType">International Shipping</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-label">Weight</div>
+                        <div class="summary-value" id="modalWeight">10 kg</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-label">Distance</div>
+                        <div class="summary-value" id="modalDistance">5000 km</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-label">Shipping Cost</div>
+                        <div class="summary-value shipping-cost" id="modalShippingCost">$250.00</div>
+                    </div>
+                </div>
+                
+                <div class="total-amount">
+                    <div class="total-label">Total Amount to Pay</div>
+                    <div class="total-value" id="modalTotalAmount">$250.00</div>
+                </div>
+            </div>
+            
+            <h3 class="mt-50">Select Payment Method</h3>
+            <div class="payment-options">
+                <div class="payment-option" onclick="selectPayment('bitcoin')">
+                    <div class="payment-option-badge">Popular</div>
+                    <div class="payment-option-icon">
+                        <i class="fab fa-bitcoin"></i>
+                    </div>
+                    <h4 class="payment-option-title">Bitcoin</h4>
+                    <p class="payment-option-desc">Cryptocurrency payment with low fees</p>
+                </div>
+                
+                <div class="payment-option" onclick="selectPayment('giftcard')">
+                    <div class="payment-option-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h4 class="payment-option-title">Gift Cards</h4>
+                    <p class="payment-option-desc">Pay with Apple, Razer Gold, or Steam cards</p>
+                </div>
+            </div>
+            
+            <!-- Bitcoin Payment Section -->
+            <div class="bitcoin-section" id="bitcoinSection">
+                <div class="bitcoin-header">
+                    <div class="bitcoin-icon">
+                        <i class="fab fa-bitcoin"></i>
+                    </div>
+                    <div>
+                        <h3>Bitcoin Payment Instructions</h3>
+                        <p>Send exact amount to the address below</p>
+                    </div>
+                </div>
+                
+                <div class="bitcoin-address-container">
+                    <p><strong>Amount to Send:</strong> <span id="bitcoinAmount">0.0054 BTC</span></p>
+                    <div class="bitcoin-address" id="bitcoinAddress">
+                        35DrUNecGXnuhQvizUTxYD42WN9PqcHUHz
+                    </div>
+                    <button class="copy-address-btn" onclick="copyBitcoinAddress()">
+                        <i class="fas fa-copy"></i> Copy Address
+                    </button>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bitcoin-qr">
+                        <div class="qr-placeholder">
+                            Bitcoin QR Code
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="payment-verification-section">
+                    <h4>Payment Verification</h4>
+                    <p>After sending Bitcoin, please upload your transaction receipt</p>
+                    <div class="receipt-section active" id="bitcoinReceiptSection">
+                        <div class="upload-options">
+                            <div class="upload-option" onclick="openFileUpload()">
+                                <div class="upload-icon">
+                                    <i class="fas fa-upload"></i>
+                                </div>
+                                <h4 class="upload-title">Upload Screenshot</h4>
+                                <p class="upload-desc">Upload a screenshot of your transaction</p>
+                            </div>
+                            
+                            <div class="upload-option" onclick="sendEmailReceipt()">
+                                <div class="upload-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <h4 class="upload-title">Email Receipt</h4>
+                                <p class="upload-desc">Send receipt to our verification email</p>
+                            </div>
+                        </div>
+                        
+                        <div class="email-upload">
+                            <h4>Email your receipt to:</h4>
+                            <div class="email-address">
+                                lastfrontierfreightforwarding@aol.com
+                            </div>
+                            <button class="email-btn" onclick="window.location.href='mailto:lastfrontierfreightforwarding@aol.com?subject=Bitcoin Payment Receipt'">
+                                <i class="fas fa-paper-plane"></i> Open Email Client
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gift Card Payment Section -->
+            <div class="giftcard-section" id="giftcardSection">
+                <h3>Select Gift Card Type</h3>
+                <div class="giftcard-options">
+                    <div class="giftcard-option" onclick="selectGiftCard('apple')">
+                        <div class="giftcard-icon apple-icon">
+                            <i class="fab fa-apple"></i>
+                        </div>
+                        <h4 class="giftcard-option-title">Apple Gift Card</h4>
+                        <p>$25, $50, $100 denominations</p>
+                    </div>
+                    
+                    <div class="giftcard-option" onclick="selectGiftCard('razer')">
+                        <div class="giftcard-icon razer-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h4 class="giftcard-option-title">Razer Gold</h4>
+                        <p>Global gaming credits</p>
+                    </div>
+                </div>
+                
+                <div class="giftcard-instructions">
+                    <h4>How to Pay with Gift Cards:</h4>
+                    <ol>
+                        <li>Purchase a gift card from any authorized retailer</li>
+                        <li>Scratch off the PIN code carefully</li>
+                        <li>Email the card number and PIN to: lastfrontierfreightforwarding@aol.com</li>
+                        <li>Include your order reference in the email</li>
+                        <li>We will verify and confirm your payment within 24 hours</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="payment-actions">
+                <button class="payment-btn secondary" onclick="closePaymentModal()">
+                    <i class="fas fa-times"></i> Cancel
+                </button>
+                <button class="payment-btn primary disabled" id="confirmPaymentBtn" disabled onclick="confirmPayment()">
+                    <i class="fas fa-check"></i> Confirm Payment
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Website Content -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-shipping-fast"></i>
+                </div>
+                <div>
+                    <div class="logo-text">Last Frontier <span>Freight Forwarding</span></div>
+                    <div class="logo-tagline">Global Logistics & Shipping Solutions 2026</div>
+                </div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#services"><i class="fas fa-ship"></i> Services</a></li>
+                    <li><a href="#registration"><i class="fas fa-truck-loading"></i> Ship Now</a></li>
+                    <li><a href="#tracking"><i class="fas fa-search-location"></i> Track Package</a></li>
+                    <li><a href="#contact"><i class="fas fa-phone-alt"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Global Shipping Solutions for the <span class="highlight">Modern World 2026</span></h1>
+            <p class="hero-subtitle">
+                Last Frontier Freight Forwarding LLC provides comprehensive logistics services worldwide. 
+                From small parcels to full container loads, we deliver your goods safely, securely, and on time.
+            </p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="180">0</div>
+                    <div class="stat-label">Countries Served</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="7500">0</div>
+                    <div class="stat-label">Successful Shipments</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="99">0</div>
+                    <div class="stat-label">On-Time Delivery Rate</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="24">0</div>
+                    <div class="stat-label">Hour Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title">Our Premium Services 2026</h2>
+            <p class="section-subtitle">
+                We offer a complete range of freight forwarding and logistics services designed to meet 
+                the unique needs of businesses and individuals worldwide.
+            </p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title"><i class="fas fa-plane"></i> Air Freight</h3>
+                        <p class="service-description">
+                            Fast and reliable air cargo solutions for time-sensitive shipments. 
+                            Global network with daily departures.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Express delivery in 2-5 days</li>
+                            <li><i class="fas fa-check"></i> Real-time tracking</li>
+                            <li><i class="fas fa-check"></i> Customs clearance included</li>
+                            <li><i class="fas fa-check"></i> Insurance available</li>
+                        </ul>
+                        <button class="service-btn" onclick="scrollToRegistration()">
+                            Get Quote <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ship"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title"><i class="fas fa-ship"></i> Ocean Freight</h3>
+                        <p class="service-description">
+                            Cost-effective sea shipping for large volumes. FCL and LCL options 
+                            with worldwide port coverage.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Full container loads (FCL)</li>
+                            <li><i class="fas fa-check"></i> Less than container (LCL)</li>
+                            <li><i class="fas fa-check"></i> 30+ global ports</li>
+                            <li><i class="fas fa-check"></i> Hazardous materials handling</li>
+                        </ul>
+                        <button class="service-btn" onclick="scrollToRegistration()">
+                            Get Quote <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title"><i class="fas fa-truck"></i> Land Transportation</h3>
+                        <p class="service-description">
+                            Comprehensive road and rail solutions for domestic and cross-border 
+                            shipments throughout North America.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> TL and LTL trucking</li>
+                            <li><i class="fas fa-check"></i> Cross-border expertise</li>
+                            <li><i class="fas fa-check"></i> Temperature-controlled</li>
+                            <li><i class="fas fa-check"></i> Same-day delivery available</li>
+                        </ul>
+                        <button class="service-btn" onclick="scrollToRegistration()">
+                            Get Quote <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="registration" class="registration-section">
+        <div class="container">
+            <h2 class="section-title">Shipping Registration 2026</h2>
+            <p class="section-subtitle">
+                Fill out the form below to get an instant shipping quote and schedule your shipment. 
+                Our team will contact you within 2 hours.
+            </p>
+            
+            <div class="registration-container">
+                <div class="registration-form-container">
+                    <h3>Shipment Details</h3>
+                    <form id="shippingForm" onsubmit="handleSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label required">First Name</label>
+                                <input type="text" class="form-input" id="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label required">Last Name</label>
+                                <input type="text" class="form-input" id="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label required">Email Address</label>
+                            <input type="email" class="form-input" id="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label required">Phone Number</label>
+                            <input type="tel" class="form-input" id="phone" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label required">Origin Country</label>
+                                <select class="form-select" id="originCountry" required>
+                                    <option value="">Select Country</option>
+                                    <option value="US">United States</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="AU">Australia</option>
+                                    <option value="DE">Germany</option>
+                                    <option value="JP">Japan</option>
+                                    <option value="CN">China</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label required">Destination Country</label>
+                                <select class="form-select" id="destinationCountry" required>
+                                    <option value="">Select Country</option>
+                                    <option value="US">United States</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="AU">Australia</option>
+                                    <option value="DE">Germany</option>
+                                    <option value="JP">Japan</option>
+                                    <option value="CN">China</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label required">Weight (kg)</label>
+                                <input type="number" class="form-input" id="weight" min="0.1" step="0.1" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label required">Dimensions (cm)</label>
+                                <input type="text" class="form-input" id="dimensions" placeholder="L x W x H" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label required">Shipping Method</label>
+                            <select class="form-select" id="shippingMethod" required onchange="calculatePrice()">
+                                <option value="">Select Method</option>
+                                <option value="air">Air Freight - Fastest (3-7 days)</option>
+                                <option value="ocean">Ocean Freight - Economical (30-45 days)</option>
+                                <option value="land">Land Transportation - Regional (5-14 days)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Package Contents Description</label>
+                            <textarea class="form-textarea" id="contents" placeholder="Describe what you're shipping..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label required">Estimated Value ($)</label>
+                            <input type="number" class="form-input" id="value" min="0" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label required">Pickup Date</label>
+                            <input type="date" class="form-input" id="pickupDate" required>
+                        </div>
+                        
+                        <div class="form-checkbox-group">
+                            <input type="checkbox" class="form-checkbox" id="insurance" onchange="calculatePrice()">
+                            <label class="form-checkbox-label">
+                                Add Shipping Insurance (1.5% of declared value)
+                            </label>
+                        </div>
+                        
+                        <div class="form-checkbox-group">
+                            <input type="checkbox" class="form-checkbox" id="express" onchange="calculatePrice()">
+                            <label class="form-checkbox-label">
+                                Express Handling (+25% fee)
+                            </label>
+                        </div>
+                        
+                        <div class="price-display">
+                            <i class="fas fa-tag"></i>
+                            Estimated Cost: 
+                            <span class="price-amount" id="estimatedPrice">$0.00</span>
+                            <span class="delivery-time" id="deliveryTime">Select shipping method</span>
+                        </div>
+                        
+                        <div class="form-checkbox-group">
+                            <input type="checkbox" class="form-checkbox" id="terms" required>
+                            <label class="form-checkbox-label">
+                                I agree to the <a href="#" onclick="alert('Terms and conditions would be displayed here.')">Terms & Conditions</a> and 
+                                <a href="#" onclick="alert('Privacy policy would be displayed here.')">Privacy Policy</a>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i> Submit Shipping Request
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="registration-info">
+                    <h3>Why Choose Last Frontier?</h3>
+                    <ul class="service-features">
+                        <li><i class="fas fa-shield-alt"></i> Fully Insured Shipments</li>
+                        <li><i class="fas fa-globe-americas"></i> Global Network Coverage</li>
+                        <li><i class="fas fa-clock"></i> 24/7 Tracking & Support</li>
+                        <li><i class="fas fa-lock"></i> Secure Payment Options</li>
+                        <li><i class="fas fa-certificate"></i> Licensed & Bonded</li>
+                        <li><i class="fas fa-award"></i> Award-Winning Service</li>
+                    </ul>
+                    
+                    <div class="mt-50">
+                        <h4>Need Help?</h4>
+                        <p>Our shipping experts are available 24/7 to assist you with any questions about international shipping, customs, or documentation.</p>
+                        <button class="service-btn" onclick="window.open('https://wa.me/15853174473', '_blank')">
+                            <i class="fab fa-whatsapp"></i> WhatsApp: +1 (585) 317-4473
+                        </button>
+                    </div>
+                    
+                    <div class="mt-30">
+                        <h4>Payment Options</h4>
+                        <p>We accept multiple payment methods including Bitcoin and gift cards for your convenience.</p>
+                        <div class="payment-methods-icons">
+                            <i class="fab fa-bitcoin fa-2x"></i>
+                            <i class="fab fa-apple fa-2x"></i>
+                            <i class="fas fa-gift fa-2x"></i>
+                            <i class="fas fa-credit-card fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tracking Section -->
+    <section id="tracking" class="tracking-section">
+        <div class="container">
+            <h2 class="section-title">Track Your Package 2026</h2>
+            <p class="section-subtitle">
+                Enter your tracking number below to get real-time updates on your shipment status
+            </p>
+            
+            <div class="tracking-container">
+                <div class="tracking-form-container">
+                    <h3>Package Tracking</h3>
+                    <div class="form-group">
+                        <label class="form-label required">Tracking Number</label>
+                        <input type="text" class="form-input" id="trackingNumber" placeholder="Enter your tracking number (e.g., LF123456)">
+                    </div>
+                    <button class="submit-btn" onclick="trackPackage()">
+                        <i class="fas fa-search-location"></i> Track Package
+                    </button>
+                    
+                    <div class="tracking-result" id="trackingResult">
+                        <h3><i class="fas fa-box"></i> Package Status</h3>
+                        <div class="mt-30">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                                <div>
+                                    <h4 style="color: white; margin-bottom: 5px;" id="trackingPackageName">International Shipment</h4>
+                                    <p style="opacity: 0.9;" id="trackingPackageDetails">From: Loading... To: Loading...</p>
+                                </div>
+                                <div style="background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: var(--radius-sm);">
+                                    <div style="font-size: 0.9rem; opacity: 0.9;">Tracking Number</div>
+                                    <div style="font-weight: 700; font-size: 1.2rem;" id="trackingNumberDisplay">LF123456</div>
+                                </div>
+                            </div>
+                            
+                            <div class="tracking-steps" id="trackingSteps">
+                                <!-- Tracking steps will be dynamically added here -->
+                            </div>
+                            
+                            <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: var(--radius-sm); margin-top: 30px;">
+                                <h4 style="color: white; margin-bottom: 15px;">Shipment Details</h4>
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                                    <div>
+                                        <div style="font-size: 0.9rem; opacity: 0.9;">Current Status</div>
+                                        <div style="font-weight: 700; font-size: 1.1rem;" id="trackingStatus">Processing</div>
+                                    </div>
+                                    <div>
+                                        <div style="font-size: 0.9rem; opacity: 0.9;">Estimated Delivery</div>
+                                        <div style="font-weight: 700; font-size: 1.1rem;" id="trackingDelivery">Calculating...</div>
+                                    </div>
+                                    <div>
+                                        <div style="font-size: 0.9rem; opacity: 0.9;">Weight</div>
+                                        <div style="font-weight: 700; font-size: 1.1rem;" id="trackingWeight">Loading...</div>
+                                    </div>
+                                    <div>
+                                        <div style="font-size: 0.9rem; opacity: 0.9;">Shipping Method</div>
+                                        <div style="font-weight: 700; font-size: 1.1rem;" id="trackingMethod">Loading...</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-top: 30px; text-align: center;">
+                                <button class="service-btn" style="background: var(--accent); color: white; border: none;" onclick="printTracking()">
+                                    <i class="fas fa-print"></i> Print Tracking Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Last Frontier Freight</h4>
+                    <p>Global logistics and freight forwarding solutions for businesses and individuals worldwide. Your trusted partner in international shipping.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="#registration"><i class="fas fa-chevron-right"></i> Get Quote</a></li>
+                        <li><a href="#tracking"><i class="fas fa-chevron-right"></i> Track Package</a></li>
+                        <li><a href="#" onclick="toggleAdminPanel()"><i class="fas fa-chevron-right"></i> Admin Panel</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Headquarters</strong><br>
+                                123 Logistics Drive, Suite 500<br>
+                                Anchorage, AK 99501, USA
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <strong>WhatsApp</strong><br>
+                                +1 (585) 317-4473
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong><br>
+                                lastfrontierfreightforwarding@aol.com
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Business Hours</h4>
+                    <ul class="footer-links">
+                        <li><strong>Monday - Friday:</strong> 24/7</li>
+                        <li><strong>Saturday:</strong> 24/7</li>
+                        <li><strong>Sunday:</strong> 24/7</li>
+                        <li><strong>Emergency Support:</strong> Always Available</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 Last Frontier Freight Forwarding LLC. All rights reserved. | 
+                <a href="#" style="color: var(--accent);">Privacy Policy</a> | 
+                <a href="#" style="color: var(--accent);">Terms of Service</a></p>
+                <p class="mt-30">US DOT Number: MC-123456 | FMC License: 1234567</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ========== GLOBAL VARIABLES ==========
+        let shippingMethods = [
+            { id: 1, name: "Air Freight - Fastest (3-7 days)", basePrice: 250, multiplier: 15 },
+            { id: 2, name: "Ocean Freight - Economical (30-45 days)", basePrice: 150, multiplier: 8 },
+            { id: 3, name: "Land Transportation - Regional (5-14 days)", basePrice: 100, multiplier: 5 }
+        ];
+        
+        let users = JSON.parse(localStorage.getItem('shippingUsers')) || [];
+        let pendingPayments = JSON.parse(localStorage.getItem('pendingPayments')) || [];
+        let trackingNumbers = JSON.parse(localStorage.getItem('trackingNumbers')) || [];
+        let selectedPaymentMethod = null;
+        let selectedGiftCardType = null;
+        let currentUser = null;
+        let tapCount = 0;
+        let tapTimer = null;
+        const adminPassword = "282828"; // The secret code
+        const whatsappNumber = "+15853174473";
+        
+        // ========== TRIPLE TAP FUNCTIONALITY ==========
+        document.addEventListener('click', function(event) {
+            tapCount++;
+            
+            if (tapTimer) {
+                clearTimeout(tapTimer);
+            }
+            
+            tapTimer = setTimeout(() => {
+                if (tapCount === 3) {
+                    // Show admin access modal instead of directly showing panel
+                    openAdminAccessModal();
+                }
+                tapCount = 0;
+            }, 500);
+        });
+        
+        // ========== ADMIN ACCESS MODAL FUNCTIONS ==========
+        function openAdminAccessModal() {
+            const modal = document.getElementById('adminAccessModal');
+            modal.classList.add('active');
+            document.getElementById('adminPassword').value = '';
+            document.getElementById('adminPassword').focus();
+            document.getElementById('adminErrorMessage').classList.remove('show');
+        }
+        
+        function closeAdminAccessModal() {
+            document.getElementById('adminAccessModal').classList.remove('active');
+        }
+        
+        function verifyAdminPassword() {
+            const password = document.getElementById('adminPassword').value;
+            
+            if (password === adminPassword) {
+                // Correct password - show admin panel with animation
+                closeAdminAccessModal();
+                const adminPanel = document.getElementById('adminPanel');
+                adminPanel.classList.add('visible');
+                
+                // Pulse animation to make it noticeable
+                setTimeout(() => {
+                    adminPanel.classList.remove('visible');
+                    adminPanel.classList.add('visible');
+                }, 100);
+                
+                // Optional: Show success message
+                console.log('Admin access granted');
+            } else {
+                // Wrong password - show error
+                document.getElementById('adminErrorMessage').classList.add('show');
+                document.getElementById('adminPassword').value = '';
+                document.getElementById('adminPassword').focus();
+                
+                // Shake animation
+                const modalContent = document.querySelector('.admin-access-content');
+                modalContent.style.animation = 'shake 0.5s ease';
+                setTimeout(() => {
+                    modalContent.style.animation = '';
+                }, 500);
+            }
+        }
+        
+        // Allow Enter key to submit password
+        document.getElementById('adminPassword').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                verifyAdminPassword();
+            }
+        });
+        
+        // ========== ADMIN PANEL FUNCTIONS ==========
+        function toggleAdminPanel() {
+            const panel = document.getElementById('adminPanel');
+            panel.classList.toggle('active');
+            if (panel.classList.contains('active')) {
+                loadAdminData();
+                updateTrackingSelect();
+            }
+        }
+        
+        function loadAdminData() {
+            // Update statistics
+            document.getElementById('totalUsers').textContent = users.length;
+            document.getElementById('pendingPayments').textContent = pendingPayments.length;
+            
+            // Calculate total revenue
+            let revenue = users
+                .filter(user => user.paymentVerified)
+                .reduce((sum, user) => sum + (user.finalPrice || 0), 0);
+            document.getElementById('totalRevenue').textContent = '$' + revenue.toFixed(2);
+            
+            document.getElementById('shippingMethods').textContent = shippingMethods.length;
+            
+            // Load recent registrations
+            loadRecentRegistrations();
+            
+            // Load shipping methods
+            loadShippingMethods();
+            
+            // Load users
+            filterUsers();
+        }
+        
+        function loadRecentRegistrations() {
+            const registrationsDiv = document.getElementById('recentRegistrations');
+            registrationsDiv.innerHTML = '';
+            
+            // Get last 5 registrations
+            const recent = [...users].reverse().slice(0, 5);
+            
+            if (recent.length === 0) {
+                registrationsDiv.innerHTML = '<p style="color: #666; text-align: center;">No recent registrations</p>';
+                return;
+            }
+            
+            recent.forEach(user => {
+                const regItem = document.createElement('div');
+                regItem.className = 'registration-item';
+                
+                const timeAgo = getTimeAgo(new Date(user.timestamp));
+                const statusClass = user.paymentVerified ? 'status-verified' : 'status-pending';
+                const statusText = user.paymentVerified ? '✓ Verified' : '⏳ Pending';
+                
+                regItem.innerHTML = `
+                    <div class="registration-time">${timeAgo}</div>
+                    <div class="registration-name">${user.firstName} ${user.lastName}</div>
+                    <div class="registration-email">${user.email}</div>
+                    <div><span class="registration-status ${statusClass}">${statusText}</span></div>
+                `;
+                
+                registrationsDiv.appendChild(regItem);
+            });
+        }
+        
+        function getTimeAgo(date) {
+            const seconds = Math.floor((new Date() - date) / 1000);
+            
+            let interval = seconds / 31536000;
+            if (interval > 1) return Math.floor(interval) + ' years ago';
+            
+            interval = seconds / 2592000;
+            if (interval > 1) return Math.floor(interval) + ' months ago';
+            
+            interval = seconds / 86400;
+            if (interval > 1) return Math.floor(interval) + ' days ago';
+            
+            interval = seconds / 3600;
+            if (interval > 1) return Math.floor(interval) + ' hours ago';
+            
+            interval = seconds / 60;
+            if (interval > 1) return Math.floor(interval) + ' minutes ago';
+            
+            return 'just now';
+        }
+        
+        function loadShippingMethods() {
+            const methodsList = document.getElementById('shippingMethodsList');
+            methodsList.innerHTML = '';
+            shippingMethods.forEach((method, index) => {
+                const methodDiv = document.createElement('div');
+                methodDiv.className = 'admin-stat-card';
+                methodDiv.innerHTML = `
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <div style="font-weight: 700;">${method.name}</div>
+                            <div style="font-size: 0.9rem; color: #666;">Base: $${method.basePrice} | Mult: $${method.multiplier}/kg</div>
+                        </div>
+                        <button class="admin-btn danger" style="padding: 5px 10px;" onclick="removeShippingMethod(${index})">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                `;
+                methodsList.appendChild(methodDiv);
+            });
+        }
+        
+        function filterUsers() {
+            const usersList = document.getElementById('usersList');
+            usersList.innerHTML = '';
+            const filter = document.getElementById('adminUserFilter').value;
+            
+            let filteredUsers = users;
+            if (filter === 'pending') {
+                filteredUsers = users.filter(user => !user.paymentVerified);
+            } else if (filter === 'verified') {
+                filteredUsers = users.filter(user => user.paymentVerified);
+            }
+            
+            if (filteredUsers.length === 0) {
+                usersList.innerHTML = '<p style="color: #666; text-align: center;">No users found</p>';
+                return;
+            }
+            
+            filteredUsers.forEach((user, index) => {
+                const originalIndex = users.findIndex(u => u.timestamp === user.timestamp);
+                const userDiv = document.createElement('div');
+                userDiv.className = 'admin-stat-card';
+                userDiv.innerHTML = `
+                    <div style="text-align: left;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                            <strong>${user.firstName} ${user.lastName}</strong>
+                            <span style="font-size: 0.9rem; background: ${user.paymentVerified ? '#2ecc71' : '#f39c12'}; color: white; padding: 3px 10px; border-radius: 20px;">
+                                ${user.paymentVerified ? 'Verified' : 'Pending'}
+                            </span>
+                        </div>
+                        <div style="font-size: 0.9rem; margin-bottom: 5px;">Email: ${user.email}</div>
+                        <div style="font-size: 0.9rem; margin-bottom: 5px;">Tracking: ${user.trackingNumber || 'Not assigned'}</div>
+                        <div style="font-size: 0.9rem; margin-bottom: 5px;">Service: ${user.shippingMethod}</div>
+                        <div style="font-size: 0.9rem; margin-bottom: 10px;">Amount: $${user.finalPrice || 0}</div>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                            ${!user.paymentVerified ? 
+                                `<button class="admin-btn success" style="padding: 5px 10px;" onclick="verifyUserPayment(${originalIndex})">
+                                    <i class="fas fa-check"></i> Verify
+                                </button>` : ''
+                            }
+                            ${!user.trackingNumber && user.paymentVerified ? 
+                                `<button class="admin-btn info" style="padding: 5px 10px;" onclick="assignTrackingNumber(${originalIndex})">
+                                    <i class="fas fa-barcode"></i> Assign
+                                </button>` : ''
+                            }
+                            <button class="admin-btn" style="padding: 5px 10px;" onclick="viewUserDetails(${originalIndex})">
+                                <i class="fas fa-eye"></i> View
+                            </button>
+                            <button class="admin-btn danger" style="padding: 5px 10px;" onclick="deleteUser(${originalIndex})">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+                usersList.appendChild(userDiv);
+            });
+        }
+        
+        function updateTrackingSelect() {
+            const select = document.getElementById('trackingSelect');
+            select.innerHTML = '<option value="">Select Tracking Number</option>';
+            
+            trackingNumbers.forEach(tracking => {
+                const user = users[tracking.userId];
+                if (user) {
+                    const option = document.createElement('option');
+                    option.value = tracking.trackingNumber;
+                    option.textContent = `${tracking.trackingNumber} - ${user.firstName} ${user.lastName}`;
+                    select.appendChild(option);
+                }
+            });
+        }
+        
+        function loadTrackingDetails() {
+            const trackingNumber = document.getElementById('trackingSelect').value;
+            const detailsDiv = document.getElementById('trackingDetails');
+            
+            if (!trackingNumber) {
+                detailsDiv.innerHTML = '';
+                return;
+            }
+            
+            const tracking = trackingNumbers.find(t => t.trackingNumber === trackingNumber);
+            if (!tracking) return;
+            
+            const user = users[tracking.userId];
+            if (!user) return;
+            
+            const steps = tracking.steps || ['Order Received', 'Payment Verified', 'Processing', 'In Transit', 'Out for Delivery', 'Delivered'];
+            const currentStep = tracking.currentStep || 0;
+            
+            let stepsHtml = '<div class="tracking-control">';
+            stepsHtml += '<h5>Update Tracking Status</h5>';
+            
+            steps.forEach((step, index) => {
+                let statusClass = 'pending';
+                if (index < currentStep) statusClass = 'completed';
+                else if (index === currentStep) statusClass = 'active';
+                
+                stepsHtml += `
+                    <div class="tracking-step-control">
+                        <div class="step-status ${statusClass}">${index + 1}</div>
+                        <div class="step-name">${step}</div>
+                        <div class="step-actions">
+                            ${index === currentStep ? 
+                                `<button class="step-btn complete" onclick="completeTrackingStep('${trackingNumber}')">
+                                    <i class="fas fa-check"></i> Complete
+                                </button>` : ''
+                            }
+                            ${index > currentStep ? 
+                                `<button class="step-btn activate" onclick="activateTrackingStep('${trackingNumber}', ${index})">
+                                    <i class="fas fa-play"></i> Activate
+                                </button>` : ''
+                            }
+                        </div>
+                    </div>
+                `;
+            });
+            
+            stepsHtml += `
+                <div style="margin-top: 20px; padding: 15px; background: var(--primary); color: white; border-radius: var(--radius-sm);">
+                    <div style="font-weight: 700; margin-bottom: 10px;">Current Status: ${steps[currentStep]}</div>
+                    <div>Customer: ${user.firstName} ${user.lastName}</div>
+                    <div>Estimated Delivery: ${new Date(tracking.estimatedDelivery).toLocaleDateString()}</div>
+                </div>
+            </div>`;
+            
+            detailsDiv.innerHTML = stepsHtml;
+        }
+        
+        function completeTrackingStep(trackingNumber) {
+            const tracking = trackingNumbers.find(t => t.trackingNumber === trackingNumber);
+            if (tracking && tracking.currentStep < tracking.steps.length - 1) {
+                tracking.currentStep++;
+                tracking.status = tracking.steps[tracking.currentStep].toLowerCase().replace(/ /g, '_');
+                
+                if (tracking.currentStep === tracking.steps.length - 1) {
+                    tracking.status = 'delivered';
+                }
+                
+                localStorage.setItem('trackingNumbers', JSON.stringify(trackingNumbers));
+                loadTrackingDetails();
+                
+                // Update the user's tracking status
+                const user = users[tracking.userId];
+                if (user) {
+                    user.trackingStatus = tracking.status;
+                    localStorage.setItem('shippingUsers', JSON.stringify(users));
+                }
+                
+                alert(`Tracking updated to: ${tracking.steps[tracking.currentStep]}`);
+            }
+        }
+        
+        function activateTrackingStep(trackingNumber, stepIndex) {
+            const tracking = trackingNumbers.find(t => t.trackingNumber === trackingNumber);
+            if (tracking && stepIndex >= 0 && stepIndex < tracking.steps.length) {
+                tracking.currentStep = stepIndex;
+                tracking.status = tracking.steps[stepIndex].toLowerCase().replace(/ /g, '_');
+                localStorage.setItem('trackingNumbers', JSON.stringify(trackingNumbers));
+                loadTrackingDetails();
+                
+                // Update the user's tracking status
+                const user = users[tracking.userId];
+                if (user) {
+                    user.trackingStatus = tracking.status;
+                    localStorage.setItem('shippingUsers', JSON.stringify(users));
+                }
+                
+                alert(`Tracking activated at: ${tracking.steps[stepIndex]}`);
+            }
+        }
+        
+        function addShippingMethod() {
+            const name = document.getElementById('adminShippingName').value;
+            const price = parseFloat(document.getElementById('adminShippingPrice').value);
+            
+            if (!name || !price) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            shippingMethods.push({
+                id: shippingMethods.length + 1,
+                name: name,
+                basePrice: price,
+                multiplier: price * 0.06
+            });
+            
+            localStorage.setItem('shippingMethods', JSON.stringify(shippingMethods));
+            document.getElementById('adminShippingName').value = '';
+            document.getElementById('adminShippingPrice').value = '';
+            loadShippingMethods();
+            loadAdminData();
+            alert('Shipping method added successfully!');
+        }
+        
+        function removeShippingMethod(index) {
+            if (confirm('Are you sure you want to remove this shipping method?')) {
+                shippingMethods.splice(index, 1);
+                localStorage.setItem('shippingMethods', JSON.stringify(shippingMethods));
+                loadShippingMethods();
+                loadAdminData();
+            }
+        }
+        
+        function verifyUserPayment(index) {
+            users[index].paymentVerified = true;
+            users[index].verifiedDate = new Date().toISOString();
+            localStorage.setItem('shippingUsers', JSON.stringify(users));
+            
+            pendingPayments = pendingPayments.filter(p => p.userIndex !== index);
+            localStorage.setItem('pendingPayments', JSON.stringify(pendingPayments));
+            
+            // Send tracking email notification
+            sendTrackingEmailNotification(users[index]);
+            
+            loadAdminData();
+            updateTrackingSelect();
+            alert('Payment verified successfully! Tracking number will be assigned and emailed to customer.');
+        }
+        
+        function assignTrackingNumber(index) {
+            const user = users[index];
+            const trackingNumber = 'LF' + Date.now().toString().slice(-6) + Math.floor(Math.random() * 100).toString().padStart(2, '0');
+            
+            user.trackingNumber = trackingNumber;
+            user.trackingAssignedDate = new Date().toISOString();
+            user.trackingStatus = 'processing';
+            
+            // Save to tracking numbers
+            trackingNumbers.push({
+                trackingNumber: trackingNumber,
+                userId: index,
+                status: 'processing',
+                steps: ['Order Received', 'Payment Verified', 'Processing', 'In Transit', 'Out for Delivery', 'Delivered'],
+                currentStep: 2,
+                assignedDate: new Date().toISOString(),
+                estimatedDelivery: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString()
+            });
+            
+            localStorage.setItem('shippingUsers', JSON.stringify(users));
+            localStorage.setItem('trackingNumbers', JSON.stringify(trackingNumbers));
+            
+            // Send tracking number email
+            sendTrackingNumberEmail(user, trackingNumber);
+            
+            loadAdminData();
+            updateTrackingSelect();
+            alert(`Tracking number ${trackingNumber} assigned successfully! Email sent to ${user.email}`);
+        }
+        
+        function viewUserDetails(index) {
+            const user = users[index];
+            let details = `User Details:\n\n`;
+            details += `Name: ${user.firstName} ${user.lastName}\n`;
+            details += `Email: ${user.email}\n`;
+            details += `Phone: ${user.phone}\n`;
+            details += `Tracking: ${user.trackingNumber || 'Not assigned'}\n`;
+            details += `Shipping: ${user.shippingMethod}\n`;
+            details += `Weight: ${user.weight}kg\n`;
+            details += `Value: $${user.value}\n`;
+            details += `Amount: $${user.finalPrice}\n`;
+            details += `Status: ${user.paymentVerified ? 'Verified' : 'Pending'}\n`;
+            details += `Date: ${new Date(user.timestamp).toLocaleString()}\n`;
+            
+            alert(details);
+        }
+        
+        function deleteUser(index) {
+            if (confirm('Are you sure you want to delete this user? This cannot be undone.')) {
+                // Also delete associated tracking
+                trackingNumbers = trackingNumbers.filter(t => t.userId !== index);
+                users.splice(index, 1);
+                localStorage.setItem('shippingUsers', JSON.stringify(users));
+                localStorage.setItem('trackingNumbers', JSON.stringify(trackingNumbers));
+                loadAdminData();
+                updateTrackingSelect();
+                alert('User deleted successfully!');
+            }
+        }
+        
+        function backupData() {
+            const backup = {
+                users: users,
+                shippingMethods: shippingMethods,
+                pendingPayments: pendingPayments,
+                trackingNumbers: trackingNumbers,
+                backupDate: new Date().toISOString()
+            };
+            
+            const dataStr = JSON.stringify(backup, null, 2);
+            const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+            const exportFileDefaultName = `shipping-backup-${new Date().toISOString().split('T')[0]}.json`;
+            
+            const linkElement = document.createElement('a');
+            linkElement.setAttribute('href', dataUri);
+            linkElement.setAttribute('download', exportFileDefaultName);
+            linkElement.click();
+            
+            alert('Backup created successfully!');
+        }
+        
+        function clearAllData() {
+            if (confirm('WARNING: This will delete ALL data including users, payments, and shipping methods. Are you absolutely sure?')) {
+                if (confirm('This action cannot be undone. Type "DELETE" to confirm.')) {
+                    localStorage.clear();
+                    users = [];
+                    shippingMethods = [
+                        { id: 1, name: "Air Freight - Fastest (3-7 days)", basePrice: 250, multiplier: 15 },
+                        { id: 2, name: "Ocean Freight - Economical (30-45 days)", basePrice: 150, multiplier: 8 },
+                        { id: 3, name: "Land Transportation - Regional (5-14 days)", basePrice: 100, multiplier: 5 }
+                    ];
+                    pendingPayments = [];
+                    trackingNumbers = [];
+                    
+                    loadAdminData();
+                    updateTrackingSelect();
+                    alert('All data has been cleared.');
+                }
+            }
+        }
+        
+        function exportToCSV() {
+            let csv = 'Name,Email,Phone,Tracking,Shipping Method,Weight,Value,Amount,Status,Date\n';
+            
+            users.forEach(user => {
+                csv += `"${user.firstName} ${user.lastName}",`;
+                csv += `${user.email},`;
+                csv += `${user.phone},`;
+                csv += `${user.trackingNumber || 'Not assigned'},`;
+                csv += `${user.shippingMethod},`;
+                csv += `${user.weight},`;
+                csv += `${user.value},`;
+                csv += `${user.finalPrice},`;
+                csv += `${user.paymentVerified ? 'Verified' : 'Pending'},`;
+                csv += `${new Date(user.timestamp).toLocaleString()}\n`;
+            });
+            
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.setAttribute('hidden', '');
+            a.setAttribute('href', url);
+            a.setAttribute('download', `shipping-users-${new Date().toISOString().split('T')[0]}.csv`);
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            
+            alert('CSV exported successfully!');
+        }
+        
+        // ========== EMAIL NOTIFICATION FUNCTIONS ==========
+        function sendTrackingEmailNotification(user) {
+            // Generate tracking link
+            const trackingLink = `${window.location.origin}${window.location.pathname}#tracking`;
+            
+            // Email content
+            const emailSubject = `Your Last Frontier Freight Order #${user.orderNumber} - Payment Verified`;
+            const emailBody = `
+Dear ${user.firstName} ${user.lastName},
+
+Thank you for your payment! Your order has been verified and is now being processed.
+
+**Order Details:**
+• Order Number: ${user.orderNumber}
+• Service: ${user.shippingMethod}
+• Amount: $${user.finalPrice}
+• Destination: ${user.destinationCountry}
+
+**Next Steps:**
+1. Your tracking number will be assigned within 24 hours
+2. You will receive another email with your tracking number
+3. Click this link to track your package: ${trackingLink}
+
+**Track Your Package:**
+Click here to track: ${trackingLink}
+
+**Need Help?**
+WhatsApp: ${whatsappNumber}
+Email: lastfrontierfreightforwarding@aol.com
+
+Thank you for choosing Last Frontier Freight Forwarding!
+
+Best regards,
+Last Frontier Freight Team
+            `;
+            
+            // Simulate sending email
+            console.log(`📧 Email sent to ${user.email} with subject: ${emailSubject}`);
+            
+            // Store email notification
+            const emailNotifications = JSON.parse(localStorage.getItem('emailNotifications')) || [];
+            emailNotifications.push({
+                to: user.email,
+                subject: emailSubject,
+                body: emailBody,
+                sent: new Date().toISOString(),
+                type: 'payment_verified'
+            });
+            localStorage.setItem('emailNotifications', JSON.stringify(emailNotifications));
+        }
+        
+        function sendTrackingNumberEmail(user, trackingNumber) {
+            // Generate tracking link
+            const trackingLink = `${window.location.origin}${window.location.pathname}#tracking`;
+            
+            // Email content
+            const emailSubject = `Your Last Frontier Freight Tracking Number - Order #${user.orderNumber}`;
+            const emailBody = `
+Dear ${user.firstName} ${user.lastName},
+
+Your tracking number has been assigned! You can now track your shipment in real-time.
+
+**Tracking Details:**
+• Tracking Number: ${trackingNumber}
+• Order Number: ${user.orderNumber}
+• Service: ${user.shippingMethod}
+• Weight: ${user.weight} kg
+• Destination: ${user.destinationCountry}
+
+**Track Your Package:**
+Click this link to track your package: ${trackingLink}
+
+Or visit our website and enter tracking number: ${trackingNumber}
+
+**Current Status:** Processing - Your package is being prepared for shipment
+
+**Estimated Delivery:** ${new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toLocaleDateString()}
+
+**Need Help?**
+WhatsApp: ${whatsappNumber}
+Email: lastfrontierfreightforwarding@aol.com
+
+Thank you for choosing Last Frontier Freight Forwarding!
+
+Best regards,
+Last Frontier Freight Team
+            `;
+            
+            // Simulate sending email
+            console.log(`📧 Tracking email sent to ${user.email}`);
+            
+            // Store email notification
+            const emailNotifications = JSON.parse(localStorage.getItem('emailNotifications')) || [];
+            emailNotifications.push({
+                to: user.email,
+                subject: emailSubject,
+                body: emailBody,
+                sent: new Date().toISOString(),
+                type: 'tracking_assigned',
+                trackingNumber: trackingNumber
+            });
+            localStorage.setItem('emailNotifications', JSON.stringify(emailNotifications));
+        }
+        
+        function sendOrderConfirmationEmail(user) {
+            const emailSubject = `Order Confirmation - Last Frontier Freight Forwarding`;
+            const emailBody = `
+Dear ${user.firstName} ${user.lastName},
+
+Thank you for your shipping request with Last Frontier Freight Forwarding!
+
+**Order Summary:**
+• Order Number: ${user.orderNumber}
+• Service: ${user.shippingMethod}
+• Estimated Cost: $${user.finalPrice}
+• Weight: ${user.weight} kg
+• Destination: ${user.destinationCountry}
+
+**Next Steps:**
+1. Complete your payment using the payment modal
+2. Upload your payment receipt
+3. We will verify your payment within 24 hours
+4. You will receive your tracking number via email
+
+**Track Your Package (After Payment Verification):**
+Once your payment is verified, you will receive a tracking number and can track your package here:
+${window.location.origin}${window.location.pathname}#tracking
+
+**Need Help?**
+WhatsApp: ${whatsappNumber}
+Email: lastfrontierfreightforwarding@aol.com
+
+Thank you for choosing Last Frontier Freight Forwarding!
+
+Best regards,
+Last Frontier Freight Team
+            `;
+            
+            console.log(`📧 Order confirmation email sent to ${user.email}`);
+            
+            // Store email notification
+            const emailNotifications = JSON.parse(localStorage.getItem('emailNotifications')) || [];
+            emailNotifications.push({
+                to: user.email,
+                subject: emailSubject,
+                body: emailBody,
+                sent: new Date().toISOString(),
+                type: 'order_confirmation'
+            });
+            localStorage.setItem('emailNotifications', JSON.stringify(emailNotifications));
+        }
+        
+        // ========== TRACKING FUNCTIONS ==========
+        function trackPackage() {
+            const trackingInput = document.getElementById('trackingNumber').value.trim().toUpperCase();
+            
+            if (!trackingInput) {
+                alert('Please enter a tracking number');
+                return;
+            }
+            
+            // Find tracking information
+            const trackingInfo = trackingNumbers.find(t => t.trackingNumber === trackingInput);
+            
+            if (!trackingInfo) {
+                alert('Tracking number not found. Please check the number and try again.');
+                return;
+            }
+            
+            const user = users[trackingInfo.userId];
+            
+            if (!user) {
+                alert('User information not found for this tracking number.');
+                return;
+            }
+            
+            // Update tracking display
+            document.getElementById('trackingPackageName').textContent = `${user.shippingMethod} Shipment`;
+            document.getElementById('trackingPackageDetails').textContent = `From: ${user.originCountry} | To: ${user.destinationCountry}`;
+            document.getElementById('trackingNumberDisplay').textContent = trackingInfo.trackingNumber;
+            document.getElementById('trackingStatus').textContent = trackingInfo.status.charAt(0).toUpperCase() + trackingInfo.status.slice(1);
+            document.getElementById('trackingDelivery').textContent = new Date(trackingInfo.estimatedDelivery).toLocaleDateString();
+            document.getElementById('trackingWeight').textContent = `${user.weight} kg`;
+            document.getElementById('trackingMethod').textContent = user.shippingMethod;
+            
+            // Update tracking steps
+            const trackingStepsContainer = document.getElementById('trackingSteps');
+            trackingStepsContainer.innerHTML = '';
+            
+            const steps = trackingInfo.steps || ['Order Received', 'Payment Verified', 'Processing', 'In Transit', 'Out for Delivery', 'Delivered'];
+            const currentStep = trackingInfo.currentStep || 2;
+            
+            steps.forEach((step, index) => {
+                const stepDiv = document.createElement('div');
+                stepDiv.className = 'tracking-step';
+                
+                if (index < currentStep) {
+                    stepDiv.classList.add('completed');
+                } else if (index === currentStep) {
+                    stepDiv.classList.add('active');
+                }
+                
+                const icon = index === steps.length - 1 ? 'fa-check-circle' : 
+                            index === 0 ? 'fa-clipboard-check' : 
+                            index === 1 ? 'fa-money-check' : 
+                            index === 2 ? 'fa-cogs' : 
+                            index === 3 ? 'fa-truck' : 
+                            index === 4 ? 'fa-truck-loading' : 'fa-box';
+                
+                stepDiv.innerHTML = `
+                    <div class="step-icon">
+                        <i class="fas ${icon}"></i>
+                    </div>
+                    <div class="step-label">${step}</div>
+                `;
+                
+                trackingStepsContainer.appendChild(stepDiv);
+            });
+            
+            // Show tracking result
+            document.getElementById('trackingResult').classList.add('active');
+            
+            // Scroll to tracking result
+            setTimeout(() => {
+                document.getElementById('trackingResult').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 300);
+        }
+        
+        function printTracking() {
+            const printContent = document.getElementById('trackingResult').innerHTML;
+            const originalContent = document.body.innerHTML;
+            
+            document.body.innerHTML = `
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>Tracking Details - Last Frontier Freight</title>
+                    <style>
+                        body { font-family: Arial, sans-serif; padding: 20px; }
+                        h1 { color: #0a2540; }
+                        .tracking-info { background: #f0f4f8; padding: 20px; border-radius: 10px; margin: 20px 0; }
+                        .tracking-steps { display: flex; justify-content: space-between; margin: 30px 0; }
+                        .step { text-align: center; }
+                        .step.completed { color: #2ecc71; }
+                        .step.active { color: #ff6b35; font-weight: bold; }
+                    </style>
+                </head>
+                <body>
+                    <h1>Last Frontier Freight Forwarding - Tracking Details</h1>
+                    <div>Printed: ${new Date().toLocaleString()}</div>
+                    ${printContent}
+                </body>
+                </html>
+            `;
+            
+            window.print();
+            document.body.innerHTML = originalContent;
+            location.reload();
+        }
+        
+        // ========== PAYMENT MODAL FUNCTIONS ==========
+        function openPaymentModal(user) {
+            currentUser = user;
+            selectedPaymentMethod = null;
+            selectedGiftCardType = null;
+            
+            // Update modal with user's information
+            document.getElementById('modalServiceType').textContent = user.shippingMethod;
+            document.getElementById('modalWeight').textContent = user.weight + ' kg';
+            document.getElementById('modalDistance').textContent = 'Calculating...';
+            document.getElementById('modalShippingCost').textContent = '$' + user.finalPrice.toFixed(2);
+            document.getElementById('modalTotalAmount').textContent = '$' + user.finalPrice.toFixed(2);
+            
+            // Calculate Bitcoin amount
+            const bitcoinAmount = (user.finalPrice / 45000).toFixed(6);
+            document.getElementById('bitcoinAmount').textContent = bitcoinAmount + ' BTC';
+            
+            // Reset sections
+            document.getElementById('bitcoinSection').classList.remove('active');
+            document.getElementById('giftcardSection').classList.remove('active');
+            document.getElementById('confirmPaymentBtn').classList.add('disabled');
+            document.getElementById('confirmPaymentBtn').disabled = true;
+            
+            // Show modal
+            document.getElementById('paymentModal').classList.add('active');
+            
+            // Calculate distance
+            setTimeout(() => {
+                const distance = Math.floor(Math.random() * 8000) + 2000;
+                document.getElementById('modalDistance').textContent = distance.toLocaleString() + ' km';
+            }, 500);
+        }
+        
+        function closePaymentModal() {
+            document.getElementById('paymentModal').classList.remove('active');
+        }
+        
+        function selectPayment(method) {
+            selectedPaymentMethod = method;
+            
+            // Update UI
+            document.querySelectorAll('.payment-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            event.currentTarget.classList.add('selected');
+            
+            // Show appropriate section
+            if (method === 'bitcoin') {
+                document.getElementById('bitcoinSection').classList.add('active');
+                document.getElementById('giftcardSection').classList.remove('active');
+            } else if (method === 'giftcard') {
+                document.getElementById('bitcoinSection').classList.remove('active');
+                document.getElementById('giftcardSection').classList.add('active');
+            }
+            
+            // Enable confirm button
+            document.getElementById('confirmPaymentBtn').classList.remove('disabled');
+            document.getElementById('confirmPaymentBtn').disabled = false;
+        }
+        
+        function selectGiftCard(type) {
+            selectedGiftCardType = type;
+            
+            // Update UI
+            document.querySelectorAll('.giftcard-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            event.currentTarget.classList.add('selected');
+        }
+        
+        function copyBitcoinAddress() {
+            const address = document.getElementById('bitcoinAdd
